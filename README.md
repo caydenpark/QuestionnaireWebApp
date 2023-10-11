@@ -1,6 +1,7 @@
-#  Questionnaire Web App - Overview
+# Overview
 
 {Important!  Do not say in this section that this is college assignment.}
+We are building a questionnaire in the form of a web app.
 
 {Provide a description of your team project.  Describe how to use the software.}
 
@@ -11,6 +12,11 @@
 # Development Environment
 
 {Describe the tools that you used to develop the software}
+* IDE
+** Visual Studio Code
+* Languages
+** HTML/CSS
+** JavaScript 
 
 {Describe the programming language that you used and any libraries.}
 
