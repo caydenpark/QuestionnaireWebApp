@@ -15,6 +15,7 @@
 {Describe the programming language that you used and any libraries.}
 
 # Collaborators
+
 Connor Hopkins, Cayden Park, Lindsay Garner, Trevor Jacques, Chisom Wonodi
 
 # Useful Websites
