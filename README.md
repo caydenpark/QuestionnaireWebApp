@@ -16,9 +16,7 @@
 
 # Collaborators
 
-* Connor Hopkins
-* Cayden Park
-* Lindsay Garner
+* Connor Hopkins, Cayden Park, Lindsay Garner
 * Trevor Jacques
 * Chisom Wonodi
 
