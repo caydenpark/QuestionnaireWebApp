@@ -16,11 +16,11 @@
 
 # Collaborators
 
-Connor Hopkins
-Cayden Park
-Lindsay Garner
-Trevor Jacques
-Chisom Wonodi
+* Connor Hopkins
+* Cayden Park
+* Lindsay Garner
+* Trevor Jacques
+* Chisom Wonodi
 
 # Useful Websites
 
