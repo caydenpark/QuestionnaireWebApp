@@ -1,13 +1,8 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.}
-We are building a questionnaire in the form of a web app.
-
 {Provide a description of your team project.  Describe how to use the software.}
 
-{If this is an online class, then provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+We are building a questionnaire in the form of a web app. It will consist of several questions. Based off the user's answers to said questions, the user will be a given a programming language to learn that best suits their skill-level, knowledge, and desires. They will also be a given resources to help begin learning the new language.
 
 # Development Environment
 
