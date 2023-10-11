@@ -16,7 +16,11 @@
 
 # Collaborators
 
-{Provide a list of everyone on your team}
+Connor Hopkins
+Cayden Park
+Lindsay Garner
+Trevor Jacques
+Chisom Wonodi
 
 # Useful Websites
 
