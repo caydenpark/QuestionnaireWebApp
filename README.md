@@ -11,10 +11,6 @@ We are building a questionnaire in the form of a web app.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
-
 IDE: Visual Studio Code
  
 Languages: HTML/CSS, React, JavaScript
