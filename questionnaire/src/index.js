@@ -1,6 +1,7 @@
 // Import libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 // Give index.html something to communicate with.
 const container = document.getElementById('questionnaire');
@@ -30,7 +31,8 @@ function handleNextButton() {
 const questions = [
   function question1() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 1</h1>
         <h3>What type of software applications are you interested in developing?</h3>
         <input type="radio"/>
@@ -47,12 +49,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question2() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 2</h1>
         <h3>How do you prefer to solve problems?</h3>
         <input type="radio"/>
@@ -69,12 +73,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question3() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 3</h1>
         <h3>What is your level of experience with programming?</h3>
         <input type="radio"/>
@@ -91,12 +97,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question4() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 4</h1>
         <h3>Are you interested in Internet of Things (IoT) development?</h3>
         <input type="radio"/>
@@ -113,12 +121,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question5() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 5</h1>
         <h3>What is your preferred operating system for development?</h3>
         <input type="radio"/>
@@ -135,12 +145,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question6() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 6</h1>
         <h3>How important is community and library support to you?</h3>
         <input type="radio"/>
@@ -157,12 +169,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question7() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 7</h1>
         <h3>Are you interested in machine learning and artificial intelligence?</h3>
         <input type="radio"/>
@@ -179,12 +193,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question8() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 8</h1>
         <h3>How do you feel about a steep learning curve?</h3>
         <input type="radio"/>
@@ -198,12 +214,14 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   },
 
   function question9() {
     return (
-      <div>
+      <body>
+      <div class="container">
         <h1>Question 9</h1>
         <h3>How do you feel about complex syntax and strict rules?</h3>
         <input type="radio"/>
@@ -220,6 +238,7 @@ const questions = [
         <br/>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      </body>
     );
   }
 ]
