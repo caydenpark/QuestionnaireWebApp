@@ -17,6 +17,16 @@ window.html = 0;
 window.scores = [0, 0, 0, 0, 0] // Five for five languages.
                                 // Should be made dynamic in the future.
 
+function handleBackButton() {
+  if (i > 0) {
+    i--;
+    root.render(questions[i]());
+  } else {
+    // Display the welcome screen.
+    alert("Welcome to the questionnaire!")
+  }
+}
+
 function handleNextButton() {
   if (i < questions.length -1) {
     i++;
@@ -47,6 +57,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">Game development</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -71,6 +82,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="challenge">I enjoy creating interactive and dynamic applications.</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -95,6 +107,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">Expert</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -119,6 +132,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">Not interested at all</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -143,6 +157,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">I use multiple operating systems</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -167,6 +182,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">Not important at all - I want to build everything from scratch.</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -191,6 +207,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">I have no idea about this field.</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -212,6 +229,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="hobbyXP">I want a language that's easy to learn and use.</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
@@ -236,6 +254,7 @@ const questions = [
         <input type="radio"/>
         <label htmlFor="engineerXP">I want a language with minimal syntax rules.</label>
         <br/>
+        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
       </body>
