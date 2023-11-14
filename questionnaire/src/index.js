@@ -203,7 +203,9 @@ root.render(questions[i]());
 // Apply weighted values to given language variables.
 function onAnswerReceived(i_tracker) {
   let selectedValue = 0;
-  // Question 1 calculations...
+  /*************
+   * QUESTION 1
+  *************/
   if (questions[i_tracker] === 1) {
     // Option 1...
     if (selectedValue === 0) {
@@ -236,7 +238,301 @@ function onAnswerReceived(i_tracker) {
       window.sql = 1;
       window.html = 2;
     }
+  }
 
-  // Question 2 calculations... and so on.
+  /*************
+   * QUESTION 2
+  *************/
+  if (questions[i_tracker] === 2) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 3
+  *************/
+  if (questions[i_tracker] === 3) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 4
+  *************/
+  if (questions[i_tracker] === 4) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 5
+  *************/
+  if (questions[i_tracker] === 5) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 6
+  *************/
+  if (questions[i_tracker] === 6) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 7
+  *************/
+  if (questions[i_tracker] === 7) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 8
+  *************/
+  if (questions[i_tracker] === 8) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
+  }
+
+  /*************
+   * QUESTION 9
+  *************/
+  if (questions[i_tracker] === 9) {
+    // Option 1...
+    if (selectedValue === 0) {
+      window.python = 4;
+      window.cSharp = 3;
+      window.javaScript = 3;
+      window.sql = 4;
+      window.html = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue === 1) {
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 3;
+      window.html = 3;
+    }
+    else if (selectedValue === 2) {
+      window.python = 3;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 2;
+      window.html = 3;
+    }
+    else {
+      // Must be option 4.
+      window.python = 4;
+      window.cSharp = 4;
+      window.javaScript = 4;
+      window.sql = 1;
+      window.html = 2;
+    }
   }
 }
