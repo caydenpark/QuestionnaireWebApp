@@ -35,6 +35,13 @@ function handleNextButton() {
     // Display here the end screen and results
     alert("Thank you for finishing the questionnaire!")
   }
+
+  var radioButtons = document.getElementsByName(`q${i}`);
+
+  // Loop through and uncheck each radio button
+  for (var j = 0; j < radioButtons.length; j++) {
+    radioButtons[j].checked = false;
+  }
 }
 
 // Question functions
@@ -45,16 +52,16 @@ const questions = [
       <div class="container">
         <h1>Question 1</h1>
         <h3>What type of software applications are you interested in developing?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q1"/>
         <label htmlFor="noXP">Web development</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q1"/>
         <label htmlFor="someXP">Mobile app development</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q1"/>
         <label htmlFor="hobbyXP">Data analysis and visualization</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q1"/>
         <label htmlFor="engineerXP">Game development</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -70,16 +77,16 @@ const questions = [
       <div class="container">
         <h1>Question 2</h1>
         <h3>How do you prefer to solve problems?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q2"/>
         <label htmlFor="yes">I enjoy logical thinking and problem-solving. </label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q2"/>
         <label htmlFor="no">I like working on user interfaces and design.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q2"/>
         <label htmlFor="confused">I'm more interested in data and statistics.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q2"/>
         <label htmlFor="challenge">I enjoy creating interactive and dynamic applications.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -95,16 +102,16 @@ const questions = [
       <div class="container">
         <h1>Question 3</h1>
         <h3>What is your level of experience with programming?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q3"/>
         <label htmlFor="noXP">Beginner</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q3"/>
         <label htmlFor="someXP">Intermediate</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q3"/>
         <label htmlFor="hobbyXP">Advanced</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q3"/>
         <label htmlFor="engineerXP">Expert</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -120,16 +127,16 @@ const questions = [
       <div class="container">
         <h1>Question 4</h1>
         <h3>Are you interested in Internet of Things (IoT) development?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q4"/>
         <label htmlFor="noXP">Very interested</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q4"/>
         <label htmlFor="someXP">Somewhat interested</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q4"/>
         <label htmlFor="hobbyXP">Not very interested</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q4"/>
         <label htmlFor="engineerXP">Not interested at all</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -145,16 +152,16 @@ const questions = [
       <div class="container">
         <h1>Question 5</h1>
         <h3>What is your preferred operating system for development?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q5"/>
         <label htmlFor="noXP">Windows</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q5"/>
         <label htmlFor="someXP">macOS</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q5"/>
         <label htmlFor="hobbyXP">Linux</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q5"/>
         <label htmlFor="engineerXP">I use multiple operating systems</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -170,16 +177,16 @@ const questions = [
       <div class="container">
         <h1>Question 6</h1>
         <h3>How important is community and library support to you?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q6"/>
         <label htmlFor="noXP">Very important - I want a large community and many libraries.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q6"/>
         <label htmlFor="someXP">Moderately important - Some community and libraries are needed.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q6"/>
         <label htmlFor="hobbyXP">Not very important - I can manage with minimal support.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q6"/>
         <label htmlFor="engineerXP">Not important at all - I want to build everything from scratch.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -195,16 +202,16 @@ const questions = [
       <div class="container">
         <h1>Question 7</h1>
         <h3>Are you interested in machine learning and artificial intelligence?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q7"/>
         <label htmlFor="noXP">Yes, I'm very interested.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q7"/>
         <label htmlFor="someXP">Somewhat interested.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q7"/>
         <label htmlFor="hobbyXP">Not interested.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q7"/>
         <label htmlFor="engineerXP">I have no idea about this field.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -220,13 +227,13 @@ const questions = [
       <div class="container">
         <h1>Question 8</h1>
         <h3>How do you feel about a steep learning curve?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q8"/>
         <label htmlFor="noXP">I enjoy a challenge and don't mind a steep learning curve.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q8"/>
         <label htmlFor="someXP"> I prefer languages with a moderate learning curve.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q8"/>
         <label htmlFor="hobbyXP">I want a language that's easy to learn and use.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -242,16 +249,16 @@ const questions = [
       <div class="container">
         <h1>Question 9</h1>
         <h3>How do you feel about complex syntax and strict rules?</h3>
-        <input type="radio"/>
+        <input type="radio" name="q9"/>
         <label htmlFor="noXP"> I enjoy a challenging language with strict rules.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q9"/>
         <label htmlFor="someXP"> I prefer a language with clear and simple syntax.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q9"/>
         <label htmlFor="hobbyXP">I like languages that allow for flexibility.</label>
         <br />
-        <input type="radio"/>
+        <input type="radio" name="q9"/>
         <label htmlFor="engineerXP">I want a language with minimal syntax rules.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
@@ -265,7 +272,6 @@ const questions = [
 let i = 0;
 const nextButton = document.getElementById('nextButton');
 root.render(questions[i]());
-
 
 // Apply weighted values to given language variables.
 function onAnswerReceived(i_tracker) {
