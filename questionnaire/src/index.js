@@ -64,9 +64,12 @@ const questions = [
         <input type="radio" name="q1"/>
         <label htmlFor="engineerXP">Game development</label>
         <br/>
-        <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
-        <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+        
       </div>
+        <div class="container2">
+          <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
+          <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+        </div>
       </body>
     );
   },

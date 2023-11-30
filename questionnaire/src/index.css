@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -9,13 +10,15 @@ body {
   background-color: #333;
 }
 
-.container {
-  width: 800px;
-  max-width: 80%;
+.container,
+.container2 {
+  width: 80%; /* Adjust as needed */
+  max-width: 800px; /* Adjust as needed */
   background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+  margin-top: 20px; /* Adjust as needed */
 }
 
 .backButton,
@@ -26,6 +29,8 @@ body {
   padding: 5px 10px;
   color: white;
   outline: none;
+  width: 50%;
+  margin-top: 10px; /* Adjust as needed */
 }
 
 .backButton:hover,
