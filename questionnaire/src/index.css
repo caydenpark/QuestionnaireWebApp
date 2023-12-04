@@ -7,34 +7,50 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #333;
+  background-color: #718F94
 }
 
-.container,
-.container2 {
-  width: 80%; /* Adjust as needed */
-  max-width: 800px; /* Adjust as needed */
+.container{
+  width: 80%;
+  max-width: 800px;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px;
 }
 
 .backButton,
 .nextButton {
-  background-color: hsl(200, 100%, 50%);
-  border: 1px solid hsl(200, 100%, 30%);
+  background-color: #545775;
+  border: 1px solid #4d4f6b;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
   outline: none;
   width: 50%;
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 30px;
 }
 
 .backButton:hover,
 .nextButton:hover {
   border-color: black;
   color: black;
+  background-color: #D17E84;
 }
+.progress-bar-container {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 150px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px 2px;
+}
+
+#progress-bar {
+  height: 20px;
+  background-color: #95a2b1;
+  border-radius: 5px;
+  width: 0;
+}
+
