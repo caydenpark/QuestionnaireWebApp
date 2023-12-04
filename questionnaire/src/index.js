@@ -8,11 +8,6 @@ const container = document.getElementById('questionnaire');
 // Make it possible to display to index.html.
 const root = ReactDOM.createRoot(container);
 
-// Give index.html something to communicate with.
-const container = document.getElementById('questionnaire');
-// Make it possible to display to index.html.
-const root = ReactDOM.createRoot(container);
-
 // Initialize global variables.
 window.python = 0;
 window.cSharp = 0;
