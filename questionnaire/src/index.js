@@ -49,6 +49,12 @@ function handleNextButton() {
     "\nHTML Score: "       + window.scores[4]
     )
   }
+  var radioButtons = document.getElementsByName(`q${i}`);
+
+  // Loop through and uncheck each radio button
+  for (var j = 0; j < radioButtons.length; j++) {
+    radioButtons[j].checked = false;
+  }
 }
 
 // Question functions.
