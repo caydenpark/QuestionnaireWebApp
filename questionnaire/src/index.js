@@ -8,6 +8,11 @@ const container = document.getElementById('questionnaire');
 // Make it possible to display to index.html.
 const root = ReactDOM.createRoot(container);
 
+// Give index.html something to communicate with.
+const container = document.getElementById('questionnaire');
+// Make it possible to display to index.html.
+const root = ReactDOM.createRoot(container);
+
 // Initialize global variables.
 window.python = 0;
 window.cSharp = 0;
@@ -102,7 +107,6 @@ const questions = [
       </body>
     );
   },
-
   function question3() {
     return (
       <body>
@@ -266,6 +270,7 @@ const questions = [
         <label htmlFor="hobbyXP">I like languages that allow for flexibility.</label>
         <br />
         <input type="radio" name="q9" value="3"/>
+
         <label htmlFor="engineerXP">I want a language with minimal syntax rules.</label>
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
