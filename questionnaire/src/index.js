@@ -53,14 +53,10 @@ function handleNextButton() {
     "\nHTML Score: "       + window.scores[4]
     )
   }
-<<<<<<< HEAD
   if (progress < 100) {
     progress += 12.5; // can adjust value
     updateProgressBar();
   }
-
-=======
->>>>>>> a7774d652a70b0d6b616f4585ab812fe164aeaa2
   var radioButtons = document.getElementsByName(`q${i}`);
 
   // Loop through and uncheck each radio button
@@ -68,17 +64,12 @@ function handleNextButton() {
     radioButtons[j].checked = false;
   }
 }
-
-<<<<<<< HEAD
 let progress = 0;
 function updateProgressBar() {
   const progressBar = document.getElementById('progress-bar');
   progressBar.style.width = `${progress}%`;
 }
 // Question functions
-=======
-// Question functions.
->>>>>>> a7774d652a70b0d6b616f4585ab812fe164aeaa2
 const questions = [
   function question1() {
     return (
@@ -100,12 +91,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
-<<<<<<< HEAD
       </div>
       <div class="progress-bar-container">
         <div id="progress-bar"></div>
-=======
->>>>>>> a7774d652a70b0d6b616f4585ab812fe164aeaa2
       </div>
       </body>
     );
