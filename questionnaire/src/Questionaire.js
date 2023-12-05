@@ -135,7 +135,7 @@ const Questionnaire = () => {
     if (questionIndex > 0) {
       setQuestionIndex(questionIndex - 1);
     } else {
-      // Handle if it's the first question
+      alert("Welcome to the survey!")
     }
   };
 
@@ -145,11 +145,10 @@ const Questionnaire = () => {
       if (questionIndex < questionsArray.length - 1) {
         setQuestionIndex(questionIndex + 1);
       } else {
-        // Handle if it's the last question
-        // You can use 'answers' array to calculate scores or display results
+        alert("Thank you for taking the survey.")
       }
     } else {
-      // Handle if no option is selected
+      alert("Please select an option.")
     }
   };
 
