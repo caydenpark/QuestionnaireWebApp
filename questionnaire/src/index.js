@@ -21,10 +21,10 @@ window.mostRecent = 0;
 window.tracker = 0;
 
 function handleBackButton() {
-  if (i > 0) {
+  if (i_question > 0) {
     window.tracker -= 1;
-    i--;
-    root.render(questions[i]());
+    i_question--;
+    root.render(questions[i_question]());
   } else {
     // Display the welcome screen.
     alert("Welcome to the questionnaire!")
@@ -36,13 +36,19 @@ function handleBackButton() {
 }
 
 function handleNextButton() {
-  if (i < questions.length - 1) {
-    window.mostRecent += 1;
+  if (i_question < questions.length - 1) {
     window.tracker += 1;
-    updateScores();
-    i++;
-    root.render(questions[i]());
-  } else {
+    let selectedValue = 0;
+
+    selectedValue = getSelectedValue(selectedValue);
+    updateScores(selectedValue);
+
+    // Iterate to the next question.
+    i_question++;
+    window.mostRecent += 1;
+    root.render(questions[i_question]());
+  }
+  else {
     // Display here the end screen and results.
     alert(
       "Thank you for finishing the questionnaire!" + 
@@ -59,17 +65,31 @@ function handleNextButton() {
   }
   var radioButtons = document.getElementsByName(`q${i}`);
 
-  // Loop through and uncheck each radio button
-  for (var j = 0; j < radioButtons.length; j++) {
+function getSelectedValue(selectedValue) {
+  const radioButtons = document.getElementsByName(`q${i_question + 1}`);
+  
+  radioButtons.forEach((radioButton) => {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+    }
+  })
+  return selectedValue;
+}
+  
+// Loop through and uncheck each radio button
+for (var j = 0; j < radioButtons.length; j++) {
     radioButtons[j].checked = false;
   }
 }
+
+// Progress bar.
 let progress = 0;
 function updateProgressBar() {
   const progressBar = document.getElementById('progress-bar');
   progressBar.style.width = `${progress}%`;
 }
-// Question functions
+
+// Question functions.
 const questions = [
   function question1() {
     return (
@@ -322,33 +342,18 @@ const questions = [
 ]
 
 // Display a question.
-let i = 0;
-root.render(questions[i]());
+let i_question = 0;
+root.render(questions[i_question]());
 
 // Apply weighted values to given language variables.
-function updateScores() {
-  let selectedValue = 0;
-
-  // Remove points if the user goes back.
-  if (window.mostRecent > window.tracker) {
-    for (let i = 0; i < window.scores.length; i++) {
-      window.scores[i] -= window.points[i];
-    }
-  }
-  // Add points.
-  else {
-    for (let i = 0; i < window.scores.length; i++) {
-      window.scores[i] += window.points[i];
-    }
-  }
-
+function updateScores(selectedValue) {
   // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
   // TODO: Add in the appropriate scores
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  // Question 1 calculations...
-  if (questions[window.tracker] === 1) {
+  // Question 1 calculations.
+  if (window.tracker == 1) {
     // Option 1...
-    if (selectedValue === 0) {
+    if (selectedValue == 0) {
       window.points[0] = 4;
       window.points[1] = 3;
       window.points[2] = 3;
@@ -356,14 +361,14 @@ function updateScores() {
       window.points[4] = 4;
     }
     // Option 2... and so on.
-    else if (selectedValue === 1) {
+    else if (selectedValue == 1) {
       window.points[0] = 4;
       window.points[1] = 1;
       window.points[2] = 2;
       window.points[3] = 3;
       window.points[4] = 4;
     }
-    else if (selectedValue === 2) {
+    else if (selectedValue == 2) {
       window.points[0] = 4;
       window.points[1] = 3;
       window.points[2] = 2;
@@ -378,7 +383,298 @@ function updateScores() {
       window.points[3] = 2;
       window.points[4] = 4;
     }
+  }
 
-  // Question 2 calculations... and so on.
+  // Question 2 calculations.
+  if (window.tracker == 2) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+    // Question3 calculations.
+  if (window.tracker == 3) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 4 calculations.
+  if (window.tracker == 4) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 5 calculations.
+  if (window.tracker == 5) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 6 calculations.
+  if (window.tracker == 6) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 7 calculations.
+  if (window.tracker == 7) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 8 calculations.
+  if (window.tracker == 8) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Question 9 calculations.
+  if (window.tracker == 9) {
+    // Option 1...
+    if (selectedValue == 0) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 3;
+      window.points[3] = 4;
+      window.points[4] = 4;
+    }
+    // Option 2... and so on.
+    else if (selectedValue == 1) {
+      window.points[0] = 4;
+      window.points[1] = 1;
+      window.points[2] = 2;
+      window.points[3] = 3;
+      window.points[4] = 4;
+    }
+    else if (selectedValue == 2) {
+      window.points[0] = 4;
+      window.points[1] = 3;
+      window.points[2] = 2;
+      window.points[3] = 1;
+      window.points[4] = 0;
+    }
+    else {
+      // Must be option 4.
+      window.points[0] = 0;
+      window.points[1] = 0;
+      window.points[2] = 3;
+      window.points[3] = 2;
+      window.points[4] = 4;
+    }
+  }
+
+  // Remove points if the user goes back.
+  if (window.mostRecent > window.tracker) {
+    for (let i = 0; i < window.scores.length; i++) {
+      window.scores[i] -= window.points[i];
+    }
+  }
+  // Add points.
+  else {
+    for (let i = 0; i < window.scores.length; i++) {
+      window.scores[i] += window.points[i];
+    }
   }
 }
