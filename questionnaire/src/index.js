@@ -29,6 +29,10 @@ function handleBackButton() {
     // Display the welcome screen.
     alert("Welcome to the questionnaire!")
   }
+  if (progress > 0) {
+    progress -= 12.5; // can adjust value
+    updateProgressBar();
+  }
 }
 
 function handleNextButton() {
@@ -55,7 +59,11 @@ function handleNextButton() {
     "\nHTML Score: "       + window.scores[4]
     )
   }
-}
+  if (progress < 100) {
+    progress += 12.5; // can adjust value
+    updateProgressBar();
+  }
+  var radioButtons = document.getElementsByName(`q${i}`);
 
 function getSelectedValue(selectedValue) {
   const radioButtons = document.getElementsByName(`q${i_question + 1}`);
@@ -66,6 +74,19 @@ function getSelectedValue(selectedValue) {
     }
   })
   return selectedValue;
+}
+  
+// Loop through and uncheck each radio button
+for (var j = 0; j < radioButtons.length; j++) {
+    radioButtons[j].checked = false;
+  }
+}
+
+// Progress bar.
+let progress = 0;
+function updateProgressBar() {
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = `${progress}%`;
 }
 
 // Question functions.
@@ -90,6 +111,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
       </body>
     );
@@ -116,6 +140,9 @@ const questions = [
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
       </body>
     );
   },
@@ -139,6 +166,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
       </body>
     );
@@ -165,6 +195,9 @@ const questions = [
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
       </body>
     );
   },
@@ -189,6 +222,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
       </body>
     );
@@ -215,6 +251,9 @@ const questions = [
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
       </body>
     );
   },
@@ -240,6 +279,9 @@ const questions = [
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
       </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
       </body>
     );
   },
@@ -261,6 +303,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
       </body>
     );
@@ -287,6 +332,9 @@ const questions = [
         <br/>
         <button onClick={handleBackButton} type='button' class="backButton">Last Question</button>
         <button onClick={handleNextButton} type='button' class="nextButton">Next Question</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
       </div>
       </body>
     );
