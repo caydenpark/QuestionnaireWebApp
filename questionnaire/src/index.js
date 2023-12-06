@@ -63,7 +63,7 @@ function handleNextButton() {
     progress += 12.5; // can adjust value
     updateProgressBar();
   }
-  var radioButtons = document.getElementsByName(`q${i}`);
+  var radioButtons = document.getElementsByName(`q${i_question}`);
 
 function getSelectedValue(selectedValue) {
   const radioButtons = document.getElementsByName(`q${i_question + 1}`);
