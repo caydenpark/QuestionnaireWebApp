@@ -21,9 +21,6 @@ window.mostRecent = 0;
 window.tracker = 0;
 
 function handleBackButton() {
-
-  console.log("Inside start of handleBackButton\n"); // Debugging purposes.
-
   if (i_question > 0) {
     window.tracker -= 1;
     i_question--;
@@ -32,15 +29,9 @@ function handleBackButton() {
     // Display the welcome screen.
     alert("Welcome to the questionnaire!")
   }
-
-  console.log("Inside end of handleBackButton\n"); // Debugging purposes.
-
 }
 
 function handleNextButton() {
-
-  console.log("Inside start of handleNextButton\n"); // Debugging purposes.
-
   if (i_question < questions.length - 1) {
     window.tracker += 1;
     let selectedValue = 0;
@@ -64,15 +55,9 @@ function handleNextButton() {
     "\nHTML Score: "       + window.scores[4]
     )
   }
-
-  console.log("Inside end of handleNextButton\n"); // Debugging purposes.
-
 }
 
 function getSelectedValue(selectedValue) {
-
-  console.log("Inside start of getSelectedValue\n"); // Debugging purposes.
-
   const radioButtons = document.getElementsByName(`q${i_question + 1}`);
   
   radioButtons.forEach((radioButton) => {
@@ -80,9 +65,6 @@ function getSelectedValue(selectedValue) {
       selectedValue = radioButton.value;
     }
   })
-
-  console.log(selectedValue);
-  console.log("Inside end of getSelectedValue\n"); // Debugging purposes.
   return selectedValue;
 }
 
@@ -317,12 +299,6 @@ root.render(questions[i_question]());
 
 // Apply weighted values to given language variables.
 function updateScores(selectedValue) {
-
-  console.log("Inside start of updateScores\n"); // Debugging purposes.
-  console.log(`Window.tracker: ${window.tracker}`); // Debugging purposes.
-  console.log(`Window.mostRecent: ${window.mostRecent}`); // Debugging purposes.
-  console.log(`selectedValue: ${selectedValue}`); // Debugging purposes.
-
   // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
   // TODO: Add in the appropriate scores
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -335,7 +311,6 @@ function updateScores(selectedValue) {
       window.points[2] = 3;
       window.points[3] = 4;
       window.points[4] = 4;
-      console.log("Inside IF statement for question 1.") // Debugging purposes.
     }
     // Option 2... and so on.
     else if (selectedValue == 1) {
@@ -389,7 +364,6 @@ function updateScores(selectedValue) {
     }
     else {
       // Must be option 4.
-      console.log(`SelectedValue within Option 4 points: ${selectedValue}.`); // Debugging purposes.
       window.points[0] = 0;
       window.points[1] = 0;
       window.points[2] = 3;
@@ -647,19 +621,12 @@ function updateScores(selectedValue) {
   if (window.mostRecent > window.tracker) {
     for (let i = 0; i < window.scores.length; i++) {
       window.scores[i] -= window.points[i];
-      console.log(`Removing points from slot ${i}`); // Debugging purposes.
     }
   }
   // Add points.
   else {
     for (let i = 0; i < window.scores.length; i++) {
       window.scores[i] += window.points[i];
-      console.log(`Adding points into slot ${i}`); // Debugging purposes.
     }
   }
-
-  console.log(`Scores: ${window.scores}`); // Debugging purposes.
-  console.log(`Points: ${window.points}`); // Debugging purposes.
-  console.log("Inside end of updateScores\n"); // Debugging purposes.
-
 }
