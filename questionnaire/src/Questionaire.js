@@ -9,7 +9,7 @@ const Question = ({ question, options, handleBackButton, handleNextButton }) => 
   };
 
   return (
-    <div className="container">
+    <main className="container">
       <h1>{question}</h1>
       {Object.keys(options).map((key) => (
         <div key={key}>
@@ -30,7 +30,7 @@ const Question = ({ question, options, handleBackButton, handleNextButton }) => 
       <button onClick={() => handleNextButton(selectedValue)} type="button" className="nextButton">
         Next Question
       </button>
-    </div>
+    </main>
   );
 };
 
