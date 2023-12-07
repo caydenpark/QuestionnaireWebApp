@@ -38,7 +38,7 @@ function handleBackButton() {
 function handleNextButton() {
   if (i_question < questions.length - 1) {
     window.tracker += 1;
-    let selectedValue = 0;
+    let selectedValue;
 
     selectedValue = getSelectedValue(selectedValue);
     updateScores(selectedValue);
@@ -296,7 +296,7 @@ const questions = [
         <label htmlFor="noXP8">I enjoy a challenge and don't mind a steep learning curve.</label>
         <br />
         <input type="radio" id="someXP8" name="q8" value="1"/>
-        <label htmlFor="someXP8"> I prefer languages with a moderate learning curve.</label>
+        <label htmlFor="someXP8">I prefer languages with a moderate learning curve.</label>
         <br />
         <input type="radio" id="hobbyXP8" name="q8" value="2"/>
         <label htmlFor="hobbyXP8">I want a language that's easy to learn and use.</label>
@@ -318,10 +318,10 @@ const questions = [
         <h1>Question 9</h1>
         <h3>How do you feel about complex syntax and strict rules?</h3>
         <input type="radio" id="noXP9" name="q9" value="0"/>
-        <label htmlFor="noXP9"> I enjoy a challenging language with strict rules.</label>
+        <label htmlFor="noXP9">I enjoy a challenging language with strict rules.</label>
         <br />
         <input type="radio" id="someXP9" name="q9" value="1"/>
-        <label htmlFor="someXP9"> I prefer a language with clear and simple syntax.</label>
+        <label htmlFor="someXP9">I prefer a language with clear and simple syntax.</label>
         <br />
         <input type="radio" id="hobbyXP9" name="q9" value="2"/>
         <label htmlFor="hobbyXP9">I like languages that allow for flexibility.</label>
