@@ -10,7 +10,7 @@ Languages: HTML/CSS, React, JavaScript
 
 # Collaborators
 
-Connor Hopkins, Cayden Park, Lindsay Garner, Trevor Jacques, Chisom Wonodi
+Connor Hopkins, Cayden Park, Lindsay Garner, Trevor Jacques, <s>Chisom Wonodi</s>
 
 # Useful Websites
 
