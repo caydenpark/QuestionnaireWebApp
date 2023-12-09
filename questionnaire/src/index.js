@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { Result } from './result.js';
 
 // Give index.html something to communicate with.
 const container = document.getElementById('questionnaire');
@@ -15,8 +16,8 @@ window.javaScript = 0;
 window.sql = 0;
 window.html = 0;
 //               python, cSharp, javaScript, sql, html
-window.scores = [     0,      0,          0,   0,    0]
-window.points = [0, 0, 0, 0, 0] // Holds the values of the last answered question
+window.scores = [     0,      0,          0,   0,    0]// tracks total points for each language
+window.points = [0, 0, 0, 0, 0] // keeps track of points per each question
 window.mostRecent = 0;
 window.tracker = 0;
 
@@ -58,12 +59,18 @@ function handleNextButton() {
     "\nSQL Score: "        + window.scores[3] + 
     "\nHTML Score: "       + window.scores[4]
     )
+    console.log(window.scores)
+    root.render(
+    <Result
+      scores = {window.scores}
+    />
+    );
   }
   if (progress < 100) {
     progress += 12.5; // can adjust value
     updateProgressBar();
   }
-  var radioButtons = document.getElementsByName(`q${i}`);
+  var radioButtons = document.getElementsByName(`q${i_question}`);
 
 function getSelectedValue(selectedValue) {
   const radioButtons = document.getElementsByName(`q${i_question + 1}`);
