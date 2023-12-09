@@ -50,14 +50,14 @@ function handleNextButton() {
   }
   else {
     // Display here the end screen and results.
-    alert(
-      "Thank you for finishing the questionnaire!" +
-      "\nPython Score: " + window.scores[0] +
-      "\nC# Score: " + window.scores[1] +
-      "\nJavaScript Score: " + window.scores[2] +
-      "\nSQL Score: " + window.scores[3] +
-      "\nHTML Score: " + window.scores[4]
-    )
+    // alert(
+    //   "Thank you for finishing the questionnaire!" +
+    //   "\nPython Score: " + window.scores[0] +
+    //   "\nC# Score: " + window.scores[1] +
+    //   "\nJavaScript Score: " + window.scores[2] +
+    //   "\nSQL Score: " + window.scores[3] +
+    //   "\nHTML Score: " + window.scores[4]
+    // )
     let language = findLanguage();
     root.render(displayResults(language, resources));
   }
